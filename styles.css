@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Theme Colors */
+:root {
+    --primary-color: rgba(178,127,106,255);
+    --background-color: rgba(255,255,255,255);
+    --hover-color: rgba(178, 127, 106, 0.7);
+    --secondary-font-color: rgba(120, 85, 70, 1);
+}
+
+/* Font Import */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Header Styling */
+.main-header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.cafe-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+/* Navigation Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--secondary-font-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden on larger screens */
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    margin-right: 20px; /* Adjust away from the edge */
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger Animation */
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Show Hamburger Menu */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Dropdown Menu */
+    .nav-links {
+        flex-direction: column;
+        position: fixed; /* Make it part of the header */
+        top: 0;
+        left: 0;
+        background-color: var(--background-color);
+        height: 100vh; /* Full height */
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        z-index: 999;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem; /* Slightly larger for mobile */
+    }
+}
+
