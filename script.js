@@ -1,4 +1,3 @@
-
 // Select Elements
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -13,7 +12,18 @@ hamburger.addEventListener('click', (e) => {
 
 // Close Menu When Clicking a Navigation Link
 navLinksItems.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetId = link.getAttribute('href').slice(1); // Get the target section ID
+        const targetSection = document.getElementById(targetId);
+
+        // Smooth scroll to the target section
+        targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+
+        // Close the dropdown menu
         hamburger.classList.remove('active'); // Reset hamburger animation
         navLinks.classList.remove('active'); // Close dropdown
     });
@@ -26,3 +36,4 @@ document.addEventListener('click', (e) => {
         navLinks.classList.remove('active'); // Close dropdown
     }
 });
+
