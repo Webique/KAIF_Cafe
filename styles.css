@@ -348,16 +348,32 @@ body {
 
 /* Menu Section */
 .menu-section {
+    position: relative;
     padding: 5rem 2rem; /* Matches padding from other sections */
-    background-color: var(--background-color);
     text-align: center;
     overflow: hidden; /* For animations */
+    color: var(--primary-color); /* Text color on top of the background */
+}
+
+.menu-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bck.png') center center / cover no-repeat; /* Background image */
+    filter: blur(8px); /* Blur effect */
+    opacity: 0.6; /* Slight transparency for better readability */
+    z-index: -1; /* Ensure the background is behind the content */
 }
 
 .menu-section .container {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--global-padding); /* Ensure consistent horizontal spacing */
+    z-index: 1; /* Bring the content above the background */
 }
 
 .menu-section .section-title {
@@ -452,6 +468,7 @@ body {
         padding: 0.6rem 1rem;
     }
 }
+
 
 /* Opening Hours Section */
 .opening-hours {
@@ -812,13 +829,22 @@ body {
     }
 
     .contact-footer .footer-title {
-        font-size: 1.5rem;
+        font-size: 1.2rem; /* Smaller text for the title */
+    }
+
+    .contact-footer .footer-description {
+        font-size: 1rem; /* Smaller description text */
+    }
+
+    .social-icons {
+        gap: 2rem; /* Increase spacing between icons */
     }
 
     .social-link {
-        font-size: 1.2rem;
+        font-size: 2rem; /* Larger icons for better visibility */
     }
 }
+
 /* Section Divider */
 .section-divider {
     height: 1px; /* Thin line */
