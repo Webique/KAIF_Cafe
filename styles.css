@@ -469,7 +469,6 @@ body {
     }
 }
 
-
 /* Opening Hours Section */
 .opening-hours {
     padding: 5rem 2rem; /* Matches other sections */
@@ -850,6 +849,5 @@ body {
     height: 1px; /* Thin line */
     width: 100%; /* Full width */
     background-color: var(--primary-color); /* Brown color */
-    margin: 2rem 0; /* Spacing above and below the divider */
     opacity: 0.6; /* Slight transparency for subtlety */
 }
