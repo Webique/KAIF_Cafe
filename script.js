@@ -17,10 +17,20 @@ navLinksItems.forEach(link => {
         const targetId = link.getAttribute('href').slice(1); // Get the target section ID
         const targetSection = document.getElementById(targetId);
 
-        // Smooth scroll to the target section
-        targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+        // Calculate dynamic offset based on viewport size
+        const headerHeight = document.querySelector('.main-header').offsetHeight; // Get header height
+        let offset = headerHeight;
+
+        // Add extra offset for smaller screens (adjust value as needed)
+        if (window.innerWidth <= 768) {
+            offset += 20; // Add 10px for phones and smaller devices
+        }
+
+        // Scroll to the target section with adjusted offset
+        const sectionPosition = targetSection.offsetTop - offset;
+        window.scrollTo({
+            top: sectionPosition,
+            behavior: 'smooth'
         });
 
         // Close the dropdown menu
@@ -36,4 +46,3 @@ document.addEventListener('click', (e) => {
         navLinks.classList.remove('active'); // Close dropdown
     }
 });
-
