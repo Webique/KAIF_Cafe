@@ -807,7 +807,6 @@ body {
 }
 
 .gallery-section .section-title {
-    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -855,7 +854,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .gallery-section .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .gallery-section .section-description {
@@ -895,7 +894,6 @@ body {
 }
 
 .more-section .section-title {
-    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -940,7 +938,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .more-section .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .more-section .section-description {
