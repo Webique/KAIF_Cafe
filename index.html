@@ -27,6 +27,8 @@
           <li><a href="#menu">Menu</a></li>
             <li><a href="#hours">Opening Hours</a></li>
           <li><a href="#branches">Branches</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#more">More</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <!-- Hamburger Menu -->
@@ -108,7 +110,8 @@
     <div class="container">
       <h2 class="section-title">Our Branches</h2>
       <p class="section-description">Explore our locations and visit the branch nearest to you.</p>
-      <div class="branches-grid">
+      <button id="toggle-branches-btn" class="toggle-branches-btn">View Branches</button>
+      <div id="branches-dropdown" class="branches-dropdown hidden">
         <!-- Placeholder Cards for Branches -->
         <div class="branch-card">
           <img src="loc-removebg-preview.png" alt="Branch 1" class="branch-image">
@@ -150,6 +153,46 @@
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
+  <!-- Gallery Section -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+      <h2 class="section-title">Our Gallery</h2>
+      <p class="section-description">
+          A glimpse into our cozy tea shop and delightful moments shared by our visitors.
+      </p>
+      <div class="gallery-slider">
+          <div class="slides">
+              <img src="image1.jpg" alt="Gallery Image 1">
+              <img src="image2.jpg" alt="Gallery Image 2">
+              <img src="image3.jpg" alt="Gallery Image 3">
+              <img src="image4.jpg" alt="Gallery Image 4">
+              <img src="image5.jpg" alt="Gallery Image 5">
+              <img src="image6.jpg" alt="Gallery Image 6">
+              <img src="image7.jpg" alt="Gallery Image 7">
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- More Section -->
+<section class="more-section" id="more">
+  <div class="container">
+      <h2 class="section-title">Learn More About KAIF</h2>
+      <p class="section-description">
+          At KAIF, we take pride in crafting a unique tea experience. From our carefully curated blends to the cozy ambiance of our tea shop, KAIF is where tradition meets innovation. Discover the story behind our passion for tea.
+      </p>
+      <a href="more.pdf" class="more-button" target="_blank">Find Out More</a> <!-- Opens menu.pdf directly in a new tab -->
+  </div>
+</section>
+
+
+
+
 
 
   <footer id="contact" class="contact-footer">
@@ -177,6 +220,9 @@
       </div>
     </div>
   </footer>
+
+  
+
   
   
 

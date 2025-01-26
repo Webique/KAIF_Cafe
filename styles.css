@@ -621,6 +621,10 @@ body {
 }
 
 .branch-card {
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: space-between; /* Spread items evenly */
+    align-items: center; /* Center content horizontally */
     background-color: var(--background-color);
     border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
     border-radius: 10px;
@@ -628,6 +632,8 @@ body {
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 1rem; /* Add padding for consistent spacing */
+    height: 100%; /* Ensure equal height for all cards */
 }
 
 .branch-card:hover {
@@ -659,16 +665,17 @@ body {
 
 .branch-link {
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: auto; /* Push the button to the bottom */
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     color: var(--primary-color); /* Matches theme */
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem; /* Adjust padding for consistent size */
     border: 2px solid var(--primary-color);
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
+    width: fit-content; /* Ensure consistent button width */
 }
 
 .branch-link:hover {
@@ -734,6 +741,219 @@ body {
         padding: 0.4rem 0.8rem;
     }
 }
+/* Toggle Button */
+.toggle-branches-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-branches-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-branches-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.branches-dropdown {
+    margin-top: 1rem;
+    display: none; /* Hidden by default */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden; /* Ensures no content overflows */
+    transition: all 0.5s ease;
+}
+
+.branches-dropdown.show {
+    display: grid; /* Ensures proper grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Adjust based on your design */
+    gap: 2rem;
+    opacity: 1;
+    max-height: 1000px; /* Large enough value to show all content */
+    transition: all 0.5s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .branches-dropdown.show {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        max-height: none; /* Allow full height on smaller screens */
+    }
+}
+
+
+/* Gallery Section */
+.gallery-section {
+    padding: 5rem 2rem;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.gallery-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gallery-section .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.gallery-section .section-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--secondary-font-color);
+    margin-bottom: 3rem;
+}
+
+/* Gallery Slider */
+.gallery-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 500px; /* Consistent height for large screens */
+}
+
+.gallery-slider .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-slider img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain image aspect ratio */
+
+}
+/* Move only images 4, 5, and 6 up */
+.gallery-slider .slides img:nth-child(4),
+.gallery-slider .slides img:nth-child(5),
+.gallery-slider .slides img:nth-child(6) {
+    transform: translateY(-130px); /* Move these images up */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-section .section-title {
+        font-size: 2rem;
+    }
+
+    .gallery-section .section-description {
+        font-size: 1rem;
+    }
+
+    .gallery-slider {
+        height: auto; /* Allow height to adjust based on images */
+    }
+
+    .gallery-slider img {
+        object-fit: cover; /* Ensure images fill the container */
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove inline space */
+    }
+
+    /* Reset custom translation for images 4, 5, and 6 */
+    .gallery-slider .slides img:nth-child(4),
+    .gallery-slider .slides img:nth-child(5),
+    .gallery-slider .slides img:nth-child(6) {
+        transform: none; /* Remove upward movement */
+    }
+}
+
+
+/* More Section */
+.more-section {
+    padding: 5rem 2rem;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.more-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.more-section .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.more-section .section-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--secondary-font-color);
+    margin-bottom: 2rem;
+}
+
+/* Button */
+.more-button {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.more-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.more-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .more-section .section-title {
+        font-size: 2rem;
+    }
+
+    .more-section .section-description {
+        font-size: 1rem;
+    }
+
+    .more-button {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+
 
  /* Contact Us Footer */
 .contact-footer {
