@@ -1069,3 +1069,49 @@ body {
     background-color: var(--primary-color); /* Brown color */
     opacity: 0.6; /* Slight transparency for subtlety */
 }
+
+/* Button Styles */
+.lang-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--background-color); /* White text */
+    background-color: var(--primary-color); /* Primary color */
+    padding: 0.5rem 1.2rem;
+    margin-left: 15px; /* Space between logo and button */
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Hover */
+.lang-button:hover {
+    background-color: var(--hover-color); /* Hover color */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Logo Section Alignment */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spacing between items */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .lang-button {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .logo-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+

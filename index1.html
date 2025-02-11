@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كافيه KAIF</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <!-- Logo and Title -->
+            <div class="logo-section">
+                <img src="logo.png" alt="شعار KAIF" class="logo">
+                <span class="cafe-name">KAIF</span>
+                <a href="index.html" class="button lang-button">EN</a> <!-- English Button -->
+            </div>
+    
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#menu">قائمة الطعام</a></li>
+                    <li><a href="#hours">ساعات العمل</a></li>
+                    <li><a href="#branches">الفروع</a></li>
+                    <li><a href="#gallery">المعرض</a></li>
+                    <li><a href="#more">المزيد</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+                <!-- Hamburger Menu -->
+                <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="vid.mp4" type="video/mp4">
+      متصفحك لا يدعم فيديو HTML5.
+    </video>
+    <div class="hero-overlay">
+      <h1 class="hero-title">KAIF</h1>
+    </div>
+  </section>
+
+  <section id="about" class="who-we-are animated-section">
+    <div class="container">
+      <h2 class="section-title">من نحن</h2>
+      <p class="section-description">
+        في KAIF، نمزج بين التقاليد والرقي لخلق لحظات لا تُنسى. 
+        كافيه KAIF ليس مجرد مكان للاستمتاع بالقهوة الفاخرة، بل هو ملاذ حيث يلتقي الإبداع مع التميز.
+      </p>
+      <p class="section-description">
+        كل كوب نقدمه يحكي قصة من الشغف والدقة والالتزام بأدق التفاصيل.
+      </p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="menu" class="menu-section">
+    <div class="menu-background"></div>
+    <div class="container">
+      <h2 class="section-title">قائمة الطعام</h2>
+      <p class="section-description">
+        اكتشف أفضل مجموعة من المشروبات المحضرة يدويًا والمأكولات الفاخرة في KAIF.
+      </p>
+      <a href="menu.html" class="menu-button">عرض القائمة الكاملة</a>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="hours" class="opening-hours">
+    <div class="container">
+      <h2 class="section-title">ساعات العمل</h2>
+      <p class="section-description">نحن متواجدون يوميًا لخدمتكم. تحقق من ساعات العمل لدينا أدناه:</p>
+      <div class="hours-table">
+        <div class="day">
+          <span class="day-name">الإثنين - الخميس</span>
+          <span class="day-time">7:00 صباحًا - 2:30 صباحًا</span>
+        </div>
+        <div class="day">
+          <span class="day-name">الجمعة</span>
+          <span class="day-time">1:00 مساءً - 2:30 صباحًا</span>
+        </div>
+        <div class="day">
+          <span class="day-name">السبت - الأحد</span>
+          <span class="day-time">7:00 صباحًا - 2:30 صباحًا</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="branches" class="branches-section">
+    <div class="container">
+        <h2 class="section-title">فروعنا</h2>
+        <p class="section-description">استكشف مواقعنا وقم بزيارة الفرع الأقرب إليك.</p>
+        <button id="toggle-branches-btn" class="toggle-branches-btn">عرض الفروع</button>
+        <div id="branches-dropdown" class="branches-dropdown hidden">
+            <!-- بطاقات الفروع -->
+            <div class="branch-card">
+                <img src="loc-removebg-preview.png" alt="فرع الصحافة" class="branch-image">
+                <h3 class="branch-name">الصحافة</h3>
+                <p class="branch-address">طريق الثمامة، حي الصحافة، الرياض 13315</p>
+                <a href="https://www.google.com/maps/place/KAIF+tea/@24.7927089,46.6489723,17z/data=!3m1!4b1!4m6!3m5!1s0x3e2ee3ffbb8e4927:0xadc88186bfb50187!8m2!3d24.7927089!4d46.6489723!16s%2Fg%2F11ts9gtd9n?hl=en-SA&entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D" class="branch-link" target="_blank">عرض الموقع</a>
+            </div>
+            <div class="branch-card">
+                <img src="loc-removebg-preview.png" alt="فرع القيروان" class="branch-image">
+                <h3 class="branch-name">القيروان</h3>
+                <p class="branch-address">طريق الملك فهد، حي القيروان، الرياض 13534</p>
+                <a href="https://www.google.com/maps/place/KAIF+tea/@24.8530823,46.6001186,17z/data=!3m1!4b1!4m6!3m5!1s0x3e2ee3fe3c092f0b:0xd13ddec19913fc4c!8m2!3d24.8530823!4d46.6001186!16s%2Fg%2F11y1c49vkk?hl=en-SA&entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D" class="branch-link" target="_blank">عرض الموقع</a>
+            </div>
+            <div class="branch-card">
+                <img src="loc-removebg-preview.png" alt="فرع الملقا" class="branch-image">
+                <h3 class="branch-name">الملقا</h3>
+                <p class="branch-address">6776 وادي وج، حي الملقا، الرياض 13524</p>
+                <a href="https://www.google.com/maps/place/KAIF+tea/@24.8095227,46.6128494,17z/data=!3m1!4b1!4m6!3m5!1s0x3e2ee58dd1e9fddd:0xb6fe38f750826e0b!8m2!3d24.8095227!4d46.6128494!16s%2Fg%2F11t72frvkq?hl=en-SA&entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D" class="branch-link" target="_blank">عرض الموقع</a>
+            </div>
+            <div class="branch-card">
+                <img src="loc-removebg-preview.png" alt="فرع الروضة" class="branch-image">
+                <h3 class="branch-name">الروضة</h3>
+                <p class="branch-address">حفصة بنت عمر، حي الروضة، الرياض 13211</p>
+                <a href="https://www.google.com/maps/place/24%C2%B043'24.1%22N+46%C2%B045'32.2%22E/@24.72336,46.758941,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.72336!4d46.758941?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D" class="branch-link" target="_blank">عرض الموقع</a>
+            </div>
+            <div class="branch-card">
+                <img src="loc-removebg-preview.png" alt="فرع العرقه" class="branch-image">
+                <h3 class="branch-name">العرقه</h3>
+                <p class="branch-address">شارع الأمير مشعل بن عبدالعزيز، حي العرقه، الرياض 12534</p>
+                <a href="https://www.google.com/maps/place/%D8%B4%D8%A7%D9%87%D9%8A+%D9%83%D8%A7%D9%8A%D9%81%E2%80%AD/@24.6878669,46.5861823,17z/data=!3m1!4b1!4m6!3m5!1s0x3e2f1f7a97f8ce63:0x4b1f090d632f70db!8m2!3d24.6878669!4d46.5861823!16s%2Fg%2F11vl0vx790?hl=ar&entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D" class="branch-link" target="_blank">عرض الموقع</a>
+            </div>
+            <div class="branch-card">
+                <img src="loc-removebg-preview.png" alt="فرع الغاط" class="branch-image">
+                <h3 class="branch-name">محافظة الغاط</h3>
+                <p class="branch-address">شارع الملك فيصل بن عبدالعزيز، الغاط</p>
+                <a href="https://www.google.com/maps/place/%D8%B4%D8%A7%D9%87%D9%8A+%D9%83%D8%A7%D9%8A%D9%81%E2%80%AD/@26.0529242,44.9977949,17z/data=!3m1!4b1!4m6!3m5!1s0x3fd5573ff975ff9f:0xb435a12fedd1cc35!8m2!3d26.0529242!4d45.0003698!16s%2Fg%2F11wx0xn7tc" class="branch-link" target="_blank">عرض الموقع</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <div class="section-divider"></div>
+
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <h2 class="section-title">المعرض</h2>
+      <p class="section-description">
+        لمحة عن أجوائنا المريحة ولحظات الضيافة في KAIF.
+      </p>
+      <div class="gallery-slider">
+        <div class="slides">
+          <img src="image1.jpg" alt="صورة المعرض 1">
+          <img src="image2.jpg" alt="صورة المعرض 2">
+          <!-- Repeat for more images -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="more" class="more-section">
+    <div class="container">
+      <h2 class="section-title">تعرف على المزيد عن KAIF</h2>
+      <p class="section-description">
+        في KAIF، نفتخر بتقديم تجربة شاي فريدة. اكتشف القصة وراء شغفنا بالمشروبات والأجواء الدافئة.
+      </p>
+      <a href="more.pdf" class="more-button" target="_blank">اكتشف المزيد</a>
+    </div>
+  </section>
+
+  <footer id="contact" class="contact-footer">
+    <div class="container">
+      <h2 class="footer-title">اتصل بنا</h2>
+      <p class="footer-description">
+        ابقَ على تواصل معنا عبر قنوات التواصل الاجتماعي والبريد الإلكتروني.
+      </p>
+      <div class="social-icons">
+        <a href="https://wa.me/0508884838" target="_blank" class="social-link">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://twitter.com/kaif_ksa" target="_blank" class="social-link">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com/kaif_ksa" target="_blank" class="social-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:Kaif.ksa2@gmail.com" target="_blank" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://tiktok.com/@kaif_ksa" target="_blank" class="social-link">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
