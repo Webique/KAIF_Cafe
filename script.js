@@ -10,7 +10,7 @@ hamburger.addEventListener('click', (e) => {
     navLinks.classList.toggle('active'); // Slides down/up the menu
 });
 
-// Close Menu When Clicking a Navigation Link
+// Close Menu When Clicking a Navigation Link  
 navLinksItems.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault(); // Prevent default anchor behavior
